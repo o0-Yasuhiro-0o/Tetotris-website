@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webseiten-Code-Erklärungsseite</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Lokale Ergänzungen zum existierenden styles.css */
+        .code-block {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: auto;
+        }
+        .code-block .tag {
+            color: #569cd6; /* Blau für HTML-Tags */
+        }
+        .code-block .attribute {
+            color: #9cdcfe; /* Hellblau für Attribute */
+        }
+        .code-block .value {
+            color: #ce9178; /* Orange für Werte */
+        }
+        .explanation {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #2c2c2c; /* Angenehmer dunkler Hintergrund */
+            color: #ffffff; /* Weiße Schrift für besseren Kontrast */
+            border-left: 5px solid #0f56b5;
+        }
+        .highlight {
+            background-color: #ffeb3b;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        h2 {
+            color: white; /* Schriftfarbe für die Teilüberschriften */
+            text-shadow: 1px 1px 0 black; /* Leichte schwarze Umrandung */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Erklärungen zu den Webseiten-Scripts</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Zurück zur Hauptseite</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>1. index.html</h2>
+            <div class="code-block">
+                &lt;<span class="tag">header</span>&gt;<br>
+                &nbsp;&nbsp;&lt;<span class="tag">h1</span>&gt;Tetris&lt;/<span class="tag">h1</span>&gt;<br>
+                &nbsp;&nbsp;&lt;<span class="tag">nav</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">ul</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">li</span>&gt;&lt;<span class="tag">a</span> <span class="attribute">href</span>=<span class="value">"Tetris-Studio.html"</span>&gt;Über Tetris&lt;/<span class="tag">a</span>&gt;&lt;/<span class="tag">li</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">li</span>&gt;&lt;<span class="tag">a</span> <span class="attribute">href</span>=<span class="value">"aufbau.html"</span>&gt;Aufbau der Webseite&lt;/<span class="tag">a</span>&gt;&lt;/<span class="tag">li</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="tag">ul</span>&gt;<br>
+                &nbsp;&nbsp;&lt;/<span class="tag">nav</span>&gt;<br>
+                &lt;/<span class="tag">header</span>&gt;
+            </div>
+            <div class="explanation">
+                <strong>&lt;header&gt;:</strong> Der Kopfbereich der Seite mit Titel und Navigation.<br>
+                <strong>&lt;nav&gt; und &lt;ul&gt;:</strong> Ermöglicht die Navigation durch verschiedene Abschnitte, die die Geschichte und Varianten von Tetris beleuchten.<br>
+                <strong>&lt;a&gt;:</strong> Links zu anderen HTML-Seiten, die die Navigation ermöglichen.
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Tetris-Studio.html</h2>
+            <div class="code-block">
+                &lt;<span class="tag">section</span> <span class="attribute">id</span>=<span class="value">"features"</span>&gt;<br>
+                &nbsp;&nbsp;&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="value">"features-grid"</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">div</span> <span class="attribute">class</span>=<span class="value">"feature-item"</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">h3</span>&gt;3D-Design&lt;/<span class="tag">h3</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">p</span>&gt;Benutzer können 3D-Modelle erstellen und importieren.&lt;/<span class="tag">p</span>&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="tag">div</span>&gt;<br>
+                &nbsp;&nbsp;&lt;/<span class="tag">div</span>&gt;<br>
+                &lt;/<span class="tag">section</span>&gt;
+            </div>
+            <div class="explanation">
+                <strong>&lt;section&gt;:</strong> Definiert einen eigenständigen Inhaltsbereich.<br>
+                <strong>class="features-grid":</strong> Wendet CSS-Grid an, um Inhalte in Spalten anzuordnen.<br>
+                <strong>&lt;h3&gt; und &lt;p&gt;:</strong> Überschrift und Beschreibung der Funktion.
+            </div>
+        </section>
+
+        <section>
+            <h2>3. styles.css</h2>
+            <div class="code-block">
+                <span class="tag">body</span> {
+                    <span class="attribute">font-family</span>: <span class="value">'Roboto', sans-serif</span>;
+                    <span class="attribute">background-color</span>: <span class="value">#f4f4f4</span>;
+                    <span class="attribute">color</span>: <span class="value">#333</span>;
+                }
+            </div>
+            <div class="explanation">
+                <strong>font-family:</strong> Legt die Standardschriftart der Webseite fest.<br>
+                <strong>background-color:</strong> Definiert die Hintergrundfarbe der Webseite.<br>
+                <strong>color:</strong> Bestimmt die Standardfarbe des Textes.
+            </div>
+
+            <div class="code-block">
+                <span class="tag">.features-grid</span> {
+                    <span class="attribute">display</span>: <span class="value">grid</span>;
+                    <span class="attribute">grid-template-columns</span>: <span class="value">1fr 1fr 1fr</span>;
+                    <span class="attribute">gap</span>: <span class="value">20px</span>;
+                }
+            </div>
+            <div class="explanation">
+                <strong>display: grid:</strong> Aktiviert CSS-Grid für die Anordnung von Elementen.<br>
+                <strong>grid-template-columns:</strong> Teilt den verfügbaren Platz in drei gleich breite Spalten auf.<br>
+                <strong>gap:</strong> Fügt Abstände zwischen den Spalten hinzu.
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Interaktion zwischen HTML und CSS</h2>
+            <div class="explanation">
+                <p>Die Webseite verwendet CSS, um das Layout und Design der HTML-Struktur zu steuern:</p>
+                <ul>
+                    <li><strong>CSS-Klassen:</strong> Definieren spezifische Stile für HTML-Elemente.</li>
+                    <li><strong>IDs:</strong> Werden verwendet, um einzelne Elemente gezielt zu stylen.</li>
+                    <li><strong>Medienabfragen:</strong> Sorgen für ein responsives Design, das sich an verschiedene Bildschirmgrößen anpasst.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Florian - Alle Rechte vorbehalten</p>
+        </div>
+    </footer>
+</body>
+</html>
